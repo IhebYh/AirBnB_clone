@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 import uuid
 timeFormat = "%Y-%m-%dT%H:%M:%S.%f"
 
+
 class BaseModel():
     """ The BaseModel class from which future classes will be derived"""
     id = str(uuid.uuid4())
@@ -15,7 +16,7 @@ class BaseModel():
 
     def __str__(self, cls):
         """ String representation of the BaseModel class"""
-        return "[{:s}] ({:s}) {}".format(self.__class__.__name__,self.id,
+        return "[{:s}] ({:s}) {}".format(self.__class__.__name__, self.id,
                                          self.__dict__)
 
     def save(self):
