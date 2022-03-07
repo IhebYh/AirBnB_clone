@@ -1,4 +1,3 @@
-
 #!/usr/bin/python
 """ holds class Amenity"""
 import models
