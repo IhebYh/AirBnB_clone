@@ -1,10 +1,9 @@
 #!/usr/bin/python
 """ holds class City"""
-import models
-from models.base_model import BaseModel, Base
+from .base_model import BaseModel
 
 
-class City(BaseModel, Base):
+class City(BaseModel):
     """Representation of city """
     state_id = ""
     name = ""

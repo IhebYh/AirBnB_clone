@@ -1,12 +1,7 @@
 #!/usr/bin/python3
-"""
-initialize the models package
-"""
+"""Models to represent everything from users to cities."""
 
-from os import getenv
-from engine.file_storage import FileStorage
+from .engine.file_storage import FileStorage
 
-
-storage_t = getenv("HBNB_TYPE_STORAGE")
 storage = FileStorage()
 storage.reload()

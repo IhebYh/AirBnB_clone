@@ -4,7 +4,7 @@ Base Class Model
 """
 
 from datetime import datetime, timezone
-import models
+from . import storage
 import uuid
 timeFormat = "%Y-%m-%dT%H:%M:%S.%f"
 
@@ -46,8 +46,8 @@ class BaseModel():
     def save(self):
         """updates the attribute ' updatd_at' with the current datetime """
         self.updated_at = datetime.now(tz=timezone.utc)
-        models.storage.new(self)
-        models.storage.save()
+        storage.new(self)
+        storage.save()
 
     def to_dict(self):
         """ returns a dictionary containing all keys/values of the instance"""
